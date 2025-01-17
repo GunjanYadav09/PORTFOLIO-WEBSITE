@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #1c1c1c, #000000);
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #ff4f79, #5352ff); /* Pink-Blue gradient */
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5c8d; /* Light Pink */
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Updated Home Section with Black Theme */
+#home {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.85), rgba(26, 26, 26, 0.9)), url('https://www.example.com/your-space-background.jpg'); /* Dark gradient and space background */
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+/* Additional Glowing Elements to Enhance Dark Theme */
+#home:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        background: rgba(255, 255, 255, 0.15);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6), 0px 0px 25px rgba(0, 204, 255, 0.5);
+}
+
+#home p {
+    font-size: 1.1rem;
+    font-weight: 280;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(0, 204, 255, 0.3);
+}
+
+.skills-container,
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.skill-card, .project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #ff5c8d;
+}
+
+.skill-card {
+    background-color: rgba(26, 26, 26, 0.7);
+}
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+    color: #ff5c8d;
+    font-size: 1.2rem;
+}
+
+.skill-card p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.project-card h3 {
+    color: #00bcd4;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #ff5c8d;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.project-card a:hover {
+    color: #ffcc00;
+}
+
+#contact {
+    background: linear-gradient(to right, #ff77ff, #66ff66); /* Pink-Green gradient */
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsive Layouts */
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 3rem 5%;
+    }
+
+    #home {
+        padding: 8rem 0;
+    }
+
+    .skills-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card, .project-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+/* Social Links Styling */
+.social-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.social-links img {
+    border-radius: 50%; /* Circular icons */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links img:hover {
+    filter: brightness(1.3); /* Brighten effect on hover */
+}
